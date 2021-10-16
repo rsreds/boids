@@ -1,4 +1,4 @@
-#include "simulation.hpp"
+#include "boids/simulation.hpp"
 
 Simulation::Simulation(int width, int height,std::string title)
     : width_(width), height_(height), title_(title), running(true) {}

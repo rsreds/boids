@@ -1,4 +1,4 @@
-#include "simulation.hpp"
+#include "boids/simulation.hpp"
 
 int main() {
   Simulation simulation(640, 480, "Boids");
