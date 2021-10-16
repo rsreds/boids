@@ -8,6 +8,7 @@
         "-fdiagnostics-color=always",
         "-g",
         "${file}",
+        "${fileWorkspaceFolder}/src/simulation.cpp",
         "-o",
         "${fileWorkspaceFolder}/bin/${fileBasenameNoExtension}",
         "-lsfml-window",
