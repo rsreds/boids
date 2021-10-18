@@ -1,20 +1,24 @@
 #if !defined(SIMULATION)
 #define SIMULATION
 
-#include <string>
+#include "boids/param.hpp"
 #include <SFML/Graphics.hpp>
+#include <memory>
+#include <string>
 
-class Simulation
-{
+class Simulation {
 private:
-  int width_;
-  int height_;
+  std::shared_ptr<Parameters> param;
+  int view_width_;
+  int view_height_;
   std::string title_;
   sf::RenderWindow window;
   bool running;
   void createWindow();
+  sf::Clock clock;
+
 public:
-  Simulation(int width, int height, std::string title);
+  Simulation(std::shared_ptr<Parameters> param);
   ~Simulation();
   int run();
   void stop();

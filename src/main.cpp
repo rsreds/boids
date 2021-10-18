@@ -1,7 +1,10 @@
+#include "boids/param.hpp"
 #include "boids/simulation.hpp"
+#include <memory>
 
 int main() {
-  Simulation simulation(640, 480, "Boids");
+  auto param = std::make_shared<Parameters>();
+  Simulation simulation(param);
   simulation.run();
   return EXIT_SUCCESS;
 }
